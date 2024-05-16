@@ -15,5 +15,21 @@ function processArray(numbers) {
   const processedNumbers = processArray(numbers);
   console.log('Processed numbers:', processedNumbers); 
   // Output: [3, 4, 9, 16, 15]
+
+
   
+   // Task 2: formatArrayStrings function
+   function formatArrayStrings(strings, processedNumbers) {
+    return strings.map((str, index) => {
+      if (processedNumbers[index] % 2 === 0) {
+        return str.toUpperCase();
+      } else {
+        return str.toLowerCase();
+      }
+    });
+  }
   
+  // Example for Task 2
+  const names = ['Mary', 'Esinam' , 'Kate'];
+  const modifiedNames = formatArrayStrings(names, processedNumbers);
+  console.log('Modified names:', modifiedNames); // Output: ['MARY', 'ESINAM', 'kate']
