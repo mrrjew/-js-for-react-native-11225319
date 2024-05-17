@@ -14,3 +14,18 @@ function processArray(numbers) {
   console.log('Processed numbers:', processedNumbers); 
 
 
+  
+   // Task 2: formatArrayStrings function
+   function formatArrayStrings(strings, processedNumbers) {
+    return strings.map((str, index) => {
+      if (processedNumbers[index] % 2 === 0) {
+        return str.toUpperCase();
+      } else {
+        return str.toLowerCase();
+      }
+    });
+  }
+  
+  const names = ['Jew', 'Larbi','Danquah' , 'Kate'];
+  const modifiedNames = formatArrayStrings(names, processedNumbers);
+  console.log('Modified names:', modifiedNames);
